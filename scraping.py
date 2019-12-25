@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-URL = 'https://www.amazon.com/Atelier-Ryza-Darkness-Secret-Hideout-Nintendo/dp/B07TZKVT8W/ref=sr_1_2?crid=K8CWAUCW046V&keywords=atelier%2Bryza%2Bswitch&qid=1577158970&sprefix=atelier%2Bryza%2B%2Caps%2C228&sr=8-2&th=1'
+URL = 'https://www.amazon.com/Nintendo-Switch-Neon-Blue-Joy%E2%80%91/dp/B07VGRJDFY/ref=sr_1_1_sspa?keywords=switch&qid=1577249133&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExQTlIOFlLUFQzTFdSJmVuY3J5cHRlZElkPUEwNzgwMTMxMkNHU0ZQRE5HWlI5MSZlbmNyeXB0ZWRBZElkPUExMDQzMTYyMVRSQk5FREk5SDZLWSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU='
 
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'}
 
@@ -8,3 +8,4 @@ page = requests.get(URL, headers=headers)
 
 soup = BeautifulSoup(page.content, 'html.parser')
 
+print(soup.prettify())
