@@ -4,8 +4,21 @@ URL = 'https://www.amazon.com/Nintendo-Switch-Neon-Blue-Joy%E2%80%91/dp/B07VGRJD
 
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'}
 
-page = requests.get(URL, headers=headers)
+def check_price():
+    page = requests.get(URL, headers=headers)
 
-soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content, 'html.parser')
 
-print(soup.prettify())
+    title = soup.find(id="productTitle").get_text()
+    price = soup.find(id="priceblock_ourprice").get_text()
+
+    priceconversion = float(price[:-3])
+    if priceconversion < 500:
+        send_mail()
+
+
+
+
+
+
+
