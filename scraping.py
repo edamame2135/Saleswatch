@@ -25,7 +25,7 @@ def send_mail():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('burritotho@gmail.com', 'wjbloykpzmebluac')
+    server.login('burritotho@gmail.com', '')
     subject = 'price drop lol!'
     body = 'check the link now! https://www.amazon.com/Nintendo-Switch-Neon-Blue-Joy%E2%80%91/dp/B07VGRJDFY/ref=sr_1_1_sspa?keywords=switch&qid=1577249133&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExQTlIOFlLUFQzTFdSJmVuY3J5cHRlZElkPUEwNzgwMTMxMkNHU0ZQRE5HWlI5MSZlbmNyeXB0ZWRBZElkPUExMDQzMTYyMVRSQk5FREk5SDZLWSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU='
     msg = f"Subject: {subject}\n\n{body}"
